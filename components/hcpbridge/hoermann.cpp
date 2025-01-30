@@ -40,9 +40,9 @@ void HoermannGarageEngine::setup(int8_t rx, int8_t tx, int8_t rts)
 {
   RS485.begin(57600, SERIAL_8E1, rx, tx);
   if (rts == -1) {
-    mb.begin(&RS485, 13, true);
+    mb.begin(&RS485, 33, true);
   } else {
-    mb.begin(&RS485, 13, true);
+    mb.begin(&RS485, 33, true);
   }
   mb.slave(SLAVE_ID);
 
